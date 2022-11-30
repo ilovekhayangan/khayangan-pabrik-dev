@@ -9,16 +9,10 @@ RUN npm install --legacy-peer-deps
 #--force
 #RUN npm ci --silent
 #RUN npm install react-scripts@3.4.1 -g --silent
-COPY . ./
+COPY . .
 
 RUN npm run build
 
-# production environment
-FROM nginx:stable-alpine
+EXPOSE 3000
 
-#COPY --from=build /app/build /usr/share/nginx/html
-COPY --from=build /app/build /usr/share/nginx/html
-# new
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
