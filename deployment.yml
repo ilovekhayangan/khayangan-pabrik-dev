@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-pabrik-khayangan
+  namespace: khayangan-dev
+spec:
+  selector:
+    matchLabels:
+      run: dev-pabrik-khayangan
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: dev-pabrik-khayangan
+    spec:
+      containers:
+        - name: dev-pabrik-khayangan
+          image: registry.carakan.id/khayangan/pabrik:latest
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: registry-carakan
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-pabrik-khayangan-service
+  namespace: khayangan-dev
+spec:
+  type: NodePort
+  selector:
+    run: dev-pabrik-khayangan
+  ports:
+    - port: 80
+
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: ingress-dev-pabrik-khayangan
+#   namespace: khayangan-dev
+# spec:
+#   tls:
+#     - hosts:
+#       - dev-pabrik.khayangan.id
+#       secretName: wildcard-ssl-khayangan-id
+#   rules:
+#   - host: dev-pabrik.khayangan.id
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: dev-pabrik-khayangan-service
+#             port:
+#               number: 80
+#   ingressClassName: nginx

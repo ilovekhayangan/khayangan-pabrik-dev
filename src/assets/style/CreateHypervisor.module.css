@@ -1,0 +1,92 @@
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  height: 2.5rem;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  padding: 0 0.5rem 0 1rem;
+  outline: none;
+  font-size: 0.8rem;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.select {
+  font-size: 1rem;
+  padding: 0.75rem 0;
+}
+
+.select:hover {
+  background: #eab737;
+}
+
+.input:focus,
+.input:hover,
+.textArea:hover,
+.textArea:focus {
+  border: 1px solid #eab737;
+}
+
+.textArea {
+  resize: none;
+  font-size: 0.8rem;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.hoverImg {
+  position: absolute;
+  z-index: 9;
+  width: 23rem;
+  height: 23rem;
+  background-color: rgb(192, 190, 190, 00);
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hoverImg > div {
+  opacity: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hoverImg:hover {
+  background-color: rgb(192, 190, 190, 0.8);
+  outline: 4px dashed gray;
+}
+
+.hoverImg:hover > div {
+  opacity: 1;
+}

@@ -1,0 +1,90 @@
+.body {
+  padding: 0.5rem 1.5rem 2rem;
+}
+
+.container {
+  margin-top: 1.5rem;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.wrapper {
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 2rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.dough {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.doughCard {
+  width: 48%;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1rem 1rem 2rem 1rem;
+  background-color: #fdf7e9;
+  background-image: url("../../assets/ovals.svg");
+  background-repeat: no-repeat;
+  background-size: 150rem;
+  background-position: -10% 55%;
+}
+
+.doughTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.vm {
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  background-color: #fdf7e9;
+  background-image: url("../../assets/ovals.svg");
+  background-repeat: no-repeat;
+  background-size: 150rem;
+  background-position: -20% 85%;
+}
+
+.vmTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.vmDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 30%;
+}
+
+.vmDesc > h1 {
+  font-size: 4rem;
+}
